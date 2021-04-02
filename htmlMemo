@@ -1,0 +1,128 @@
+参考：https://www.youtube.com/playlist?list=PLjw-30bsJNVU87F5iCPAW9kB4QDUGQxUG
+
+●１.htmlの形式
+<!doctype html>
+<html lang="ja">
+  <head>
+  </head>
+	<body>
+	</body>
+</html>
+
+●２．よく使うタグ
+<meta>
+<div>
+<span>:インライン要素
+<h1>～<h6>
+<p>
+<em>：強調　斜体になる
+<strong>：重要性を示す　太字になる
+<hr>：区切りの横線
+
+●３．引用を示すタグ
+<blockquote cite="http://～～">：ブロックでまとめて引用を示す
+<q cite="http://~~">：一部引用を示す
+
+●４．略語、名前の特記、住所
+<abbr title="~~">: タグで囲んだ文字にカーソル合わせるとtitleの内容を表示
+<cite>：囲んだ文字が特殊なことを示す。
+<address>：住所を示す
+
+●５．
+<code>：コードであることを示す。
+<br>
+<pre>：エディタに書いた通りに表示する
+
+●６．リスト
+<ol>：順番を書くもの
+  <li></li>
+</ol>
+<ul>：黒丸での表示
+  <li></li>
+</ul>
+
+●７．情報とセットのリスト
+<dl>：リスト全体
+  <dt></dt>：項目名
+  <dd></dd>：内容
+</dl>
+
+●８．アンカータグ
+href
+id
+
+●９．画像
+<img>
+alt属性：読み上げ機能で読み上げられる（画像の説明を書く）
+title属性：画像のタイトル（画像にカーソル置くと表示される
+
+●１０．ファイルの読み込み
+<link >
+<script >
+
+●１１．iframe インラインフレーム
+iframe：特定のファイルをページの一部に表示させる。
+
+●１２．テーブル
+<table border="1">
+  <thead>
+		<tr>：行
+			<th><th>：表のタイトル
+		</tr>
+  </thead>
+  <tbody>
+    <tr>
+			<td></td>：列
+    </tr>
+  </tbody>
+	<tfoot>
+		<tr>
+			<td colspan="2></td>：列
+    </tr>       ↑２つセルを結合
+	</tfoot>
+</table>
+
+●１３．テキスト入力
+<input type="text" name="name"><br>
+<input type="password" name="password"><br>
+<textarea name="info" rows="4" cols="80"></textarea>
+
+●１４．ラジオボタン・チェックボックス
+<input type="radio" name="radio1" value="male">男性
+<input type="radio" name="radio1" value="female">女性
+  ⇒nameが同じものの中で１つだけ選べる
+	　value属性で送信する値を指定する。
+<input type="checkbox" name="checkbox1" value="1">人参1
+<input type="checkbox" name="checkbox1" value="2">人参2
+<input type="checkbox" name="checkbox1" value="3">人参3
+
+●１５．ドロップダウンメニュー
+<select name="address">：ドロップダウンメニュー
+  <optgroup label="関東">
+		<option value="tokyo">東京</option>
+		<option value="chiba">千葉</option>
+	</optfroup>
+	<optgroup label="関西">
+		<option value="oosaka">大阪</option>
+		<option value="tokyo">名古屋</option>
+	</optgroup>
+</select>
+
+●フォームのグルーピング
+<fieldset>：フォームの周りを線で囲む
+	<legend>IDとパスワード</legend>：フォームのタイトル
+	<label for="ID">ID</label><input type="text" name="name" id="ID"><br>
+	<label for="pass">pass</label><input type="password" name="password" id="pass"><br>
+</fieldset>
+
+<fieldset>
+	<legend>性別</legend>
+	<input type="radio" name="1" value="male" id="male"><label for="male">男性</label>
+	<input type="radio" name="1" value="female" id="female"><label for="female">女性</label><br>
+</fieldset>
+
+●ボタンと送信
+<button></button>：JSの処理のきっかけにする
+<input type="submit" value="送信">：フォームの送信
+
+<form method="POST" action="#">

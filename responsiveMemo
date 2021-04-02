@@ -1,0 +1,83 @@
+●メディアクエリとは　書き方
+　メディアクエリ：CSSを使って、各デバイスの種類・表示解像度などを利用して、随時適切なものを自動的に選択する。
+
+　htmlで指定する場合：それぞれの条件に合わせて別々にcssを各必要がある。
+Ex）<link rel="stylesheet" href="./style.css" media="(メディアクエリの記述)">
+
+　cssで指定する場合：@medhiaの外に書いてあるCSSはすべてに適用される
+Ex）
+　@media (メディアクエリの記述){
+　    /* cssの記述　*/
+　}
+
+●メディアタイプとは
+　all ：すべてのメディア
+　screen ：一般的なディスプレイ全般（スクリーン）
+　projection　：プロジェクターの利用時
+　print　：印刷用のcss
+Ex）
+　@media screen {
+　    /* cssの記述　*/
+　}
+
+●メディア特性
+特性の種類
+　width ：表示領域の横幅
+　height：表示領域の高さ
+　max-width：表示領域の横幅（このあとの指定が適用される最大値）
+　min-widht：表示領域の横幅（このあとの指定が適用される最小値）
+　device-width：デバイスの横幅
+　device-height：デバイスの高さ
+　orientation ：デバイスの向き
+     （スマホ・タブレット向け　縦長：portrait/横長：landscape）
+Ex）
+　@media screen (min-width: 480px) and (max-width: 720px){
+    /* cssの記述　*/
+}
+
+●環境に合わせた指定の追加
+　スマホの「フィット」機能対策
+　フィット機能：画面の解像度をページに合わせるブラウザの機能。
+　　　　⇒フィット機能によりメディアクエリが機能しないことがある
+　【対策】htmlのヘッダに以下を記述する
+　　<meta name="viewport" content="width=device-width">
+
+　高解像度ディスプレイへの対策
+　　Retinaディスプレイあんどの高解像度ディスプレイでは２ピクセル分を１ピクセルで表示する。
+　【対策】
+　　-webkit-device-pixel-ratio: 1
+　　-webkit-device-picel-ratio: 2
+　　　-Retina
+　　　-画像は各方向に二倍のサイズのファイルを用意するときれいに表示される
+
+●ページの印刷時のcssの指定
+　使うべき単位：絶対的な数値で指定する（基準に使用する）
+　　cm, mm, inch, pt
+　リンクの対応：印刷するとリンクに飛べなくなる
+　　　　　⇒リンクのURLを出力する
+　　　Ex)hrefがhttp:で始まる要素の直後にURLを挿入する
+      a[href^="http:"]::after{
+          content: " [" attr(href) "]";
+          color: blue;
+      }
+
+●印刷ページ毎の指定
+　@page{
+  　  margin: .5cm;
+　}
+　@page:first{
+    /*最初のページに対する指定*/
+  }
+
+  改ページ位置をコントロールする
+  根本的に改ページを許すかどうかの指定
+  page-break-after / page-break-inside / page-break-before
+  　それぞれの位置での改ページをのようにするか指定する。
+  Ex）page-break-after: avoid;  これ指定した要素の直後での改ページを避ける。
+　
+　orphans / widows
+　改ページされる際の前ページ/後ページに最低限あってほしい行数を指定する。
+
+　画像の表示サイズの指定
+　不要な要素のdisplay: none;　指定
+

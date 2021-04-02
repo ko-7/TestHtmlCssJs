@@ -1,0 +1,77 @@
+以下全部セレクタの扱い方！！
+
+参考：https://www.youtube.com/playlist?list=PLjw-30bsJNVVa4PuUseJ5YPN1K2dJr041
+
+●CSS用語
+セレクタ
+プロパティ
+値
+
+●書く場所　HTMLタグ、ヘッダ、外部ファイル
+
+●セレクタの種類
+タイプセレクタ：HTMLタグで指定する
+idセレクタ：
+classセレクタ：
+
+●CSSをまとめる
+.red,.blue,.green{
+    color: red
+}
+
+<div class="base red"></div>
+
+●特殊なセレクタ
+半角スペース　：特定要素の内側にある要素をしてい
+Ex）div .button  ：div要素の中のbuttonクラスに適用
+　　※div.button ：div要素でbuttonクラスのついているものに適用
+> ：小セレクタ　直下の子要素のみを対象とするセレクタ
+Ex) p > a{color:red;} pタグ内直下のaタグの文字色を赤にする
+
++　：隣接セレクタ　隣り合う要素のみを対象とするセレクタ
+~　：間接セレクタ　兄弟関係にある要素を対象とするセレクタ。
+
+●属性セレクタ
+hrefやtypeなどの属性を指定してCSSを適用する。
+Ex)[href]{color:#666;}  href属性のついたタグに適用する。
+Ex)a[href="#"]{color:#666;} aタグでhref="#"となっているタグに適用
+
+●疑似要素　動的なもの
+link：未訪問のリンク
+visited：訪問済みのリンク
+focus：フォーカスされている
+hover：カーソル乗せた時の反応
+
+書き方：
+Ex) a:hover{color:blue} aタグにカーソル乗せた時の反応
+
+●構造的な疑似要素
+:first-child  ：最初の子要素を指定
+:last-child　　：最後の子要素
+:only-child　　：唯一の子要素
+
+
+
+参考：https://www.youtube.com/watch?v=i6yIFZ75uGE&list=PLjw-30bsJNVVUTdM-KUqkiVy3uj4fTfLD&index=4
+
+●構造的な疑似要素　応用（表のレイアウトに便利）
+:nth-child(2n)  ：上から2n番目に適用
+:nth-last-child(2n+1)　：下から2n+1番目に適用
+
+●構造的で特殊な疑似要素
+:nth-of-type(2n)　　：特定の親要素の中のと特定の子要素が対象
+Ex）li:nth-of-type(2n)　　：liの2n番目に適用
+:only-of-type　　：特定の親要素のなかの唯一の子要素が対象
+
+●UIに関する疑似要素　inputタグに関するもの
+:enabled 　：通常状態のものに適用
+:disabled　：入力できない状態のものに適用
+:checked　 ：チェックボックスなどで、チェックされたものに適用
+
+●一つ目を指定する疑似要素  ※:: ダブルコロンを使う！！
+::first-letter　：最初の１文字
+::first-line　　：最初の１行
+
+●直前や直後に要素を挿入する疑似要素  
+::befor  ：直前を指定
+::after  ：直後を指定

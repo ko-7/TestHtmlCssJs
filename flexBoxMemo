@@ -1,0 +1,8 @@
+親要素に書く
+
+display: flex;
+flex-direction:row;　子の並び順
+               row-reverse
+               
+flex-wrap:wrap;　子のサイズを一定に保つ
+          nowrap

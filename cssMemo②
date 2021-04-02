@@ -1,0 +1,21 @@
+以下は文字の装飾
+
+●文字の周囲につく線
+text-decoration: none;　　　　　線を消す。
+text-decoration: underline;　　　下に線をつける
+text-decoration: overline;　　　上に線をつける
+text-decoration: line-through; 打消し線をつける
+
+●文頭のインデント＆大文字・小文字の指定
+text-indent: 5em;  一行目のインデントを指定する
+text-transform: none;　大文字・小文字のコントロールをする
+text-transform: capitalize; 　単語の先頭を大文字にする
+text-transform: lowercase; 　すべてを小文字で表示する。
+text-transform: uppercase;　　すべてを大文字で表示する。
+※font-variantとの違いは、大文字のサイズの大文字or小文字のサイズの小文字に変更するもの。
+
+●文字に影をつける
+text-shadow:  文字に影をつける
+書き方）text-shadow: 横　縦　ぼかしの幅　色;
+
+
