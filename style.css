@@ -814,3 +814,17 @@ footer a:hover{
 		margin-right: 8px;
 	}
 }
+@media screen and (min-width: 1080px){
+	.charm-container{
+		display: flex;
+	}
+	.charm-content-title-sizeadjust{
+		width: 40%;
+	}
+	.charm-content-wrapper{
+		width: 60%;
+	}
+	.charm-content{
+		width: 40%;
+	}
+}
