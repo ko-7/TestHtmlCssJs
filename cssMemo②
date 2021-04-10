@@ -17,5 +17,3 @@ text-transform: uppercase;　　すべてを大文字で表示する。
 ●文字に影をつける
 text-shadow:  文字に影をつける
 書き方）text-shadow: 横　縦　ぼかしの幅　色;
-
-
