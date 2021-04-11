@@ -2,6 +2,9 @@ body{
 	margin: 0;
 	padding: 0;
 }
+h1,h2,h3,h4,h5,h6,p{
+	font-family: "新ゴ R", "メイリオ" , Meiryo , "ヒラギノ角ゴPro W3" , "Hiragino Kaku Gothic Pro" , "ＭＳ Ｐゴシック" , sans-serif;
+}
 
 header{
 	height: 540px;
